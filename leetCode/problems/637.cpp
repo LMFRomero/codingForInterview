@@ -31,3 +31,38 @@ public:
         if (node->left) countLevel (node->left, level+1); 
     }
 };
+
+/* This is a iterative way to do, which I didn't know. So I'm writing it down here to practice this way
+class Solution {
+public:
+    vector<double> averageOfLevels(TreeNode* root) {
+        vector <double> answer;
+        vector <TreeNode*> nodes;
+
+        nodes.push_back(root);
+        double sum;
+        double avg;
+
+        while (nodes.empty() == false) {
+
+            sum = 0;
+            int size = nodes.size();
+
+            for (int i = 0; i < size; i++) {
+                TreeNode *current_node = nodes[0];
+                nodes.erase(nodes.begin());
+                if (current_node->right) nodes.push_back(current_node->right);
+                if (current_node->left) nodes.push_back(current_node->left);
+                sum += current_node->val;
+
+            }
+
+            avg = sum/size;
+            answer.push_back(avg);
+        }
+
+        return answer;
+    }
+};
+
+*/
