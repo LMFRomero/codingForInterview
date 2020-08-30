@@ -24,7 +24,6 @@ public:
             
             s.emplace_back(i, cur_prefix);
         }
-        
         return ans;
     }
 };
