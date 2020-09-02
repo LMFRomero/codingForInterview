@@ -10,7 +10,6 @@ Node* create(char new_value) {
     node->end = false;
     for (int i = 0; i < 26; i++)
         node->next[i] = NULL;
-    
     return node;
 }
 
